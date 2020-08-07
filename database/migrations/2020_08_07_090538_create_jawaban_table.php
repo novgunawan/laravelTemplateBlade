@@ -20,8 +20,8 @@ class CreateJawabanTable extends Migration
             $table->date('tanggal_diperbaharui');
             $table->integer('benar_value_id');
             
-            $table->unsignedBigInteger('profile_id');
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('profile_id')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
 
             $table->foreign('profile_id')->references('profile_id')->on('profiles');
             $table->foreign('category_id')->references('category_id')->on('category');

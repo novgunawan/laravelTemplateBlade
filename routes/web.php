@@ -22,3 +22,17 @@ Route::get('/master', function(){
 Route::get('/data-tables', function () {
     return view('table.dataTable');
 });
+
+Route::get('/pertanyaan', 'PertanyaanController@index');
+
+Route::get('/pertanyaan/create','PertanyaanController@create');
+
+Route::get('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@show');
+
+Route::get('/pertanyaan/{pertanyaan_id}/edit', 'PertanyaanController@edit');
+
+Route::post('/pertanyaan', 'PertanyaanController@store');
+
+Route::put('/pertanyaan/{pertanyaan_id}','PertanyaanController@update');
+//Route :: namaMethod
+Route::delete('/pertanyaan/{pertanyaan_id}','PertanyaanController@destroy');
