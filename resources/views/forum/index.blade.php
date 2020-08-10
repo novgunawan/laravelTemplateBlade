@@ -45,6 +45,7 @@
                             {{-- print isi --}}
                             <td>{{$q->isi}}</td>
                             <td style="display:flex;">
+
                               <a href="/pertanyaan/{{$q->id}}" class="btn btn-info btn-sm">Show</a>&emsp;
                               <a href="/pertanyaan/{{$q->id}}/edit" class="btn btn-info btn-sm" style="background-color: green;border-color:green;">Update</a>&emsp;
                             <form method="POST" action="/pertanyaan/{{$q->id}}">
@@ -70,34 +71,6 @@
             </div>
             <!-- /.card-body -->
           </div>
-          
-          {{-- <div class="modal fade show" id="delete" style="display: block; padding-right: 17px;" aria-modal="true">
-            <div class="modal-dialog">
-              <div class="modal-content bg-danger">
-                <div class="modal-header">
-                  <h4 class="modal-title">Konfirmasi hapus pertanyaan</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <form method="POST" action="/pertanyaan/{{$q->id}}">
-                  @csrf
-
-                  @method('DELETE')
-                <div class="modal-body">
-                  <p>Yakin ingin menghapus pertanyaan ? </p>
-                </div>
-
-                <div class="modal-footer justify-content-between">
-                  <a class="btn btn-outline-light" data-dismiss="modal" href="/pertanyaan/{{$q->id}}">Tidak</button>
-                  <a class="btn btn-outline-light btn-warning">Ya, hapus</button>
-                </div>
-                </form>
-              </div>
-              <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-          </div> --}}
     </div>
     
 @endsection

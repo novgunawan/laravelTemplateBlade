@@ -7,7 +7,7 @@
     <div class="card-body pt-0">
       <div class="row">
         <div class="col-7">
-        <h2 " id = "judul"><strong>{{$pertanyaan->judul}}</strong></h2>
+        <h2 id = "judul"><strong>{{$pertanyaan->judul}}</strong></h2>
         <p class="text-muted text-sm" id="isi">{{$pertanyaan->isi}}</p>
         </div>
         
