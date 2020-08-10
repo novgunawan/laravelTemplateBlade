@@ -25,7 +25,7 @@
                 </div>
 
               @endif
-              <a class="btn btn-primary mb-3" href="/pertanyaan/create">Create New Post</a>
+              <a class="btn btn-primary mb-3" href="{{route('pertanyaan.create')}}">Create New Post</a>
               <table class="table table-hover">
                 <thead>
                   <tr>
@@ -46,9 +46,9 @@
                             <td>{{$q->isi}}</td>
                             <td style="display:flex;">
 
-                              <a href="/pertanyaan/{{$q->id}}" class="btn btn-info btn-sm">Show</a>&emsp;
-                              <a href="/pertanyaan/{{$q->id}}/edit" class="btn btn-info btn-sm" style="background-color: green;border-color:green;">Update</a>&emsp;
-                            <form method="POST" action="/pertanyaan/{{$q->id}}">
+                            <a href="{{ route('pertanyaan.show', ['pertanyaan' => $q->id] ) }}" class="btn btn-info btn-sm">Show</a>&emsp;
+                            <a href="{{ route('pertanyaan.edit', ['pertanyaan' => $q->id]) }}" class="btn btn-info btn-sm" style="background-color: green;border-color:green;">Update</a>&emsp;
+                            <form method="POST" action="{{ route('pertanyaan.destroy', ['pertanyaan' => $q->id])}}">
                             @csrf
 
                             @method('DELETE')
